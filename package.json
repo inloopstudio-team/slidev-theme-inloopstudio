@@ -1,0 +1,33 @@
+{
+  "name": "slidev-theme-inloopstudio",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "keywords": [
+    "slidev-theme",
+    "slidev",
+    "inloop",
+    "brand"
+  ],
+  "slidev": {
+    "defaults": {
+      "fonts": {
+        "sans": "Inter",
+        "serif": "Instrument Serif",
+        "mono": "Fira Code",
+        "italic": true,
+        "weights": "300,400,500,600,700"
+      }
+    }
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.6.0",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "vue": "^3.5.22"
+  }
+}
