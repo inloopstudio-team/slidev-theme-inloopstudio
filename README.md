@@ -19,8 +19,8 @@ The sample `slides.md` is already wired to use the local theme (`theme: ./`).
 
 ## Slide helpers
 
-- Background textures per slide: add `class: bg-grid-dots` or `class: bg-grid-squares`
-- Serif headings on a slide: add `class: serif`
+- Background: Vector dotted canvas is default (no class needed)
+- Serif headings on a slide: add `class: serif` (optional, now headings are serif by default)
 - Eyebrow label style: use `<span class="eyebrow">[FEATURE]</span>`
 
 ## Local fonts
