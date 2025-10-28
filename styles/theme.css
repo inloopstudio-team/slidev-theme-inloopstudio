@@ -19,12 +19,22 @@
   --color-spanish-gray: #9197A0;
   --color-davy-gray: #505967;
 
-  /* Semantic tokens */
-  --slidev-theme-primary: var(--color-aztec-purple);
-  --inloop-text: var(--ink-900); /* dark text for light background */
-  --inloop-text-inverse: var(--color-white);
-  --inloop-bg: var(--cloud-50); /* light background (ghost white) */
-  --inloop-bg-dark: var(--color-midnight-blue);
+  /* Semantic tokens (Inloop brand) */
+  /* Keep in sync with analysis/inloop-public-web/src/styles/tokens.css */
+  --color-primary: var(--color-aztec-purple);
+  --color-secondary: var(--color-midnight-blue);
+  --color-accent: var(--color-papaya-orange);
+  --color-bg-light: var(--color-alice-blue);
+  --color-bg-dark: var(--color-midnight-blue);
+  --color-text-primary: var(--color-jaguar);
+  --color-text-inverse: var(--color-white);
+
+  /* Slidev + theme bindings */
+  --slidev-theme-primary: var(--color-primary);
+  --inloop-text: var(--color-text-primary); /* dark text for light background */
+  --inloop-text-inverse: var(--color-text-inverse);
+  --inloop-bg: var(--color-bg-light); /* light background */
+  --inloop-bg-dark: var(--color-bg-dark);
 
   /* Public Web tokens (kept in sync with inloop-public-web/src/styles/tokens.css) */
   --ink-900: var(--color-jaguar);
@@ -60,6 +70,13 @@
 }
 @font-face {
   font-family: "Inter";
+  src: url('../assets/fonts/inter/Inter_18pt-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
   src: url('../assets/fonts/inter/Inter_18pt-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
@@ -69,6 +86,27 @@
   font-family: "Inter";
   src: url('../assets/fonts/inter/Inter_18pt-SemiBold.ttf') format('truetype');
   font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url('../assets/fonts/inter/Inter_18pt-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url('../assets/fonts/inter/Inter_18pt-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url('../assets/fonts/inter/Inter_18pt-Black.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -106,8 +144,29 @@
 }
 @font-face {
   font-family: "Fira Code";
+  src: url('../assets/fonts/fira-code/FiraCode-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fira Code";
   src: url('../assets/fonts/fira-code/FiraCode-Medium.ttf') format('truetype');
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url('../assets/fonts/fira-code/FiraCode-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url('../assets/fonts/fira-code/FiraCode-Bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
