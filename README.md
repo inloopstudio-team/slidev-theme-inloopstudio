@@ -44,5 +44,5 @@ Option A – Local folder reference in another deck:
 Option B – Publish as npm package:
 
 - Ensure `package.json` has the `slidev-theme` keyword (already added).
-- Publish to a registry and then use `theme: slidev-theme-inloopstudio` in your decks.
+- Publish to npm and then use `theme: @inloopstudio/slidev-theme-inloopstudio` in your decks.
 # slidev-theme-inloopstudio
