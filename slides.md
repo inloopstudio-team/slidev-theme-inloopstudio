@@ -1,5 +1,5 @@
 ---
-theme: ./
+theme: "@inloopstudio/slidev-theme-inloopstudio"
 themeConfig:
   primary: '#5d8392'
 background: https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80
