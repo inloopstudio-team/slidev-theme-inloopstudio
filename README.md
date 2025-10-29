@@ -1,48 +1,98 @@
-# Slidev Theme – Inloop Studio
+# Slidev Theme — Inloop Studio
 
-Custom Slidev theme implementing the Inloop brand system (fonts, colors, logo, and background textures).
+Brand‑accurate Slidev theme for Inloop Studio (fonts, colors, logo, backgrounds), using a clear README structure similar to neversink.
 
-## Quick start
+## Install
 
-- Install deps: `pnpm install` (or `yarn`, `npm i`)
-- Start dev: `pnpm dev`
-- Open: http://localhost:3030
+- npm: `npm i -D @inloopstudio/slidev-theme-inloopstudio`
+- pnpm: `pnpm add -D @inloopstudio/slidev-theme-inloopstudio`
+- yarn: `yarn add -D @inloopstudio/slidev-theme-inloopstudio`
 
-The sample `slides.md` is already wired to use the local theme (`theme: ./`).
+## Use in your deck
 
-## Brand elements applied
+Add to the frontmatter of your `slides.md` (quote the value to satisfy YAML):
 
-- Fonts: Inter (sans), Instrument Serif (serif), Fira Code (mono/labels)
-- Colors: Primary Aztec Purple `#7147FF`, palette from brand guide
-- Logo: Inloop wordmark rendered on every slide (auto light/dark)
-- Background: Grid textures (dots/squares) with light Inloop background
+```yaml
+---
+theme: "@inloopstudio/slidev-theme-inloopstudio"
+---
+```
 
-## Slide helpers
+Optionally set the primary accent color:
 
-- Background: Vector dotted canvas is default (no class needed)
-- Serif headings on a slide: add `class: serif` (optional, now headings are serif by default)
-- Eyebrow label style: use `<span class="eyebrow">[FEATURE]</span>`
+```yaml
+---
+theme: "@inloopstudio/slidev-theme-inloopstudio"
+themeConfig:
+  primary: '#7147FF'
+---
+```
 
-## Local fonts
+## What you get
 
-This theme references local font files under `assets/fonts/`.
-They were copied from the Inloop brand guidelines repo:
+- Type system: Inter (sans), Instrument Serif (serif), Fira Code (mono/labels)
+- Headings: Instrument Serif globally for h1–h6; body text in Inter
+- Background: Vector dotted canvas by default (clean, scalable)
+- Logo: Inloop wordmark shown on every slide (auto light/dark)
+- Brand tokens: full color palette and semantic tokens
 
-- `assets/fonts/inter/Inter_18pt-*.ttf`
-- `assets/fonts/instrument-serif/InstrumentSerif-*.ttf`
-- `assets/fonts/fira-code/FiraCode-*.ttf`
+## Layouts
 
-If you add or remove weights, update `styles/theme.css` @font-face rules accordingly.
+- `default` — standard slide
+- `cover` — cover slide with optional background image
+- `center` — centered content (logo included)
+- `intro`, `section`, `statement`, `quote`, `fact` — lightweight variants
 
-## Using this theme in other Slidev decks
+Use via frontmatter on a slide:
 
-Option A – Local folder reference in another deck:
+```yaml
+---
+layout: center
+---
+```
 
-- Copy the `layouts/`, `styles/`, `components/`, `assets/`, and `layoutHelper.ts` into a folder (e.g. `themes/inloop/`) inside your deck.
-- In that deck’s frontmatter: `theme: ./themes/inloop`
+## Typography helpers
 
-Option B – Publish as npm package:
+- Display (Inter, Bold): `.display-300` … `.display-700`
+- Serif headings (Instrument Serif): `.heading-200` … `.heading-600` (+ `-italic` variants)
+- Eyebrow labels (Fira Code): `<span class="eyebrow">[FEATURE]</span>`
 
-- Ensure `package.json` has the `slidev-theme` keyword (already added).
-- Publish to npm and then use `theme: @inloopstudio/slidev-theme-inloopstudio` in your decks.
-# slidev-theme-inloopstudio
+## Fonts configuration (Slidev)
+
+This theme ships local fonts and recommends disabling the Google provider:
+
+```yaml
+---
+fonts:
+  provider: none
+  sans: Inter
+  serif: Instrument Serif
+  mono: Fira Code
+  weights: '300,400,500,600,700,800,900'
+  italic: true
+---
+```
+
+## Brand colors (tokens)
+
+The palette is provided as CSS variables in `:root` and mapped to semantic tokens (primary, secondary, accent, background, text). You can override in your deck if needed.
+
+## Local development
+
+- Install deps: `pnpm install` (or `npm i`, `yarn`)
+- Start dev server: `pnpm dev` → open `http://localhost:3030`
+- Build/export: `pnpm build` / `pnpm export`
+
+The sample `slides.md` in this repo can run the theme locally:
+
+```yaml
+---
+theme: ./
+---
+```
+
+## Notes
+
+- Vector dots are the default background; no class required.
+- Logo automatically switches light/dark based on Slidev dark mode.
+- If you add/remove font weights, update `styles/theme.css` @font-face rules to match files under `assets/fonts/`.
