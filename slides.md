@@ -433,6 +433,35 @@ layout: center
 </div>
 
 ---
+layout: two-cols
+---
+
+# Two Column Layout Example
+
+This is the left column with some content to demonstrate the layout.
+
+**Key Features:**
+- Dotted background
+- Inloop logo
+- Two-column grid
+
+::right::
+
+<v-clicks>
+
+**Right Column**
+
+This demonstrates the `::right::` slot syntax.
+
+- Item one
+- Item two
+- Item three
+
+**Perfect for comparisons and side-by-side content!**
+
+</v-clicks>
+
+---
 layout: center
 class: text-center
 ---
