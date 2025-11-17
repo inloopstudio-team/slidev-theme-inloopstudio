@@ -1,6 +1,6 @@
 {
   "name": "@inloopstudio/slidev-theme-inloopstudio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "build": "slidev build",
